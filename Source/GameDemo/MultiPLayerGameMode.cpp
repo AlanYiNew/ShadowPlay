@@ -29,6 +29,7 @@ AMultiPLayerGameMode::AMultiPLayerGameMode()
 
 void AMultiPLayerGameMode::HandleSeamlessTravelPlayer(AController*& C)
 {	
+	Super::HandleSeamlessTravelPlayer(C);
 	auto PC = Cast<AMyPlayerController>(C);
 	bool v = (PC == nullptr);
 	UE_LOG(LogTemp, Error, TEXT("HandleSeamlessTravelPlayer %d"), v);

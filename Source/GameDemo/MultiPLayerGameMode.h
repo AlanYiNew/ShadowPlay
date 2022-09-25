@@ -35,7 +35,7 @@ public:
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	virtual void InitGameState() override;
 
-	UFUNCTION(Server, Replicated, BlueprintCallable, Reliable)
+	UFUNCTION(Server, BlueprintCallable, Reliable)
 	void ServerRespawnPlayerController(UClass* player_character_class, APlayerController* player_controller);
 
 	UFUNCTION(BlueprintCallable)
