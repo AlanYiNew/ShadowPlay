@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SpineEditorPlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\git_repo\ShadowPlay-main\Intermediate\Build\Win64\GameDemoEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"D:\git_repo\ShadowPlay-main\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.cpp.obj"
+"D:\git_repo\ShadowPlay-main\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
+"D:\git_repo\ShadowPlay-main\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Default.rc2.res"
+/OUT:"D:\git_repo\ShadowPlay-main\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\UnrealEditor-SpineEditorPlugin.lib"
