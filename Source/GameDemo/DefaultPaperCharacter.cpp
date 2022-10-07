@@ -96,6 +96,7 @@ void ADefaultPaperCharacter::MoveHorizontal(float Value)
 
 	if (Value) {
 		//UE_LOG(LogTemp, Warning, TEXT("On Possess 1 Moving:%d"), bMoving);
+		UE_LOG(LogTemp, Warning, TEXT("branch1 %f %d %d"), Value, StickCount, bMoving);
 		if (!bMoving) {
 			bMoving = true;
 			ToggleMoveAnimationServer(bMoving);
@@ -104,6 +105,7 @@ void ADefaultPaperCharacter::MoveHorizontal(float Value)
 	}
 	else {
 		StickCount = std::max(4, StickCount+1);
+		UE_LOG(LogTemp, Warning, TEXT("branch2 %f %d %d"), Value, StickCount, bMoving);
 		if (StickCount > 3 && bMoving) {
 			StickCount = 0;
 			bMoving = false;
