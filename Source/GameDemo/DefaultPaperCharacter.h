@@ -19,9 +19,12 @@ class GAMEDEMO_API ADefaultPaperCharacter : public APaperCharacter
 
 private:
 	const int kSwingSliceCount = 16;
-	USphereComponent* sphere = nullptr;
+	UPROPERTY(EditDefaultsOnly)
+	UStaticMeshComponent* sphere = nullptr;
 	UCapsuleComponent* GetHand();
 public:
+
+	ADefaultPaperCharacter();
 	// Called every frame
 	void Tick(float DeltaTime) override;
 	void BeginPlay() override;
@@ -61,7 +64,6 @@ public:
 	void TickSpringArm();
 	
 	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
-
+	void OnOverlapBegin(UPrimitiveComponent* OverlapComponent, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	
 };

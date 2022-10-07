@@ -3,18 +3,21 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/FloatingPawnMovement.h"
-#include "MyFloatingPawnMovement.generated.h"
+#include "Camera/CameraComponent.h"
+#include "My2DCameraComponent.generated.h"
 
-//class FActorComponentTickFunction;
-//enum ELevelTick;
 /**
  * 
  */
 UCLASS()
-class GAMEDEMO_API UMyFloatingPawnMovement : public UFloatingPawnMovement
+class GAMEDEMO_API UMy2DCameraComponent : public UCameraComponent
 {
 	GENERATED_BODY()
+private:
+	UPROPERTY(EditDefaultsOnly)
+	float xBoundary = 0;
+	int count = 0;
+public:
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	UMy2DCameraComponent();
 };
-

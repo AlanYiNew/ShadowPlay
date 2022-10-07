@@ -14,11 +14,15 @@ UCLASS()
 class GAMEDEMO_API AMyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+	private:
+		bool bFacingRight = true;
+
 	public:
 		AMyPlayerController();
 		void MoveHorizontal(float x);
 		void MoveVertical(float x);
 		void SwingArm();
+		
 		
 	protected:
 		virtual void SetupInputComponent() override;

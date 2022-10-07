@@ -6,8 +6,8 @@
 #include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/SphereComponent.h"
-#include "Components/BoxComponent.h"
+#include "Components/StaticMeshComponent.h"
+
 
 #include <algorithm>
 
@@ -15,6 +15,13 @@ void ADefaultPaperCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	TickSpringArm();
+}
+
+ADefaultPaperCharacter::ADefaultPaperCharacter() {
+	PrimaryActorTick.bCanEverTick = true;
+
+	sphere = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Sphere"));
+	sphere->SetupAttachment(GetRootComponent());
 }
 
 /*
@@ -45,11 +52,11 @@ void ADefaultPaperCharacter::ToggleMoveAnimationMultiCast_Implementation(bool bR
 	if (!animationComps.IsEmpty()) {
 		if (bMoving) {
 			UE_LOG(LogTemp, Warning, TEXT("Moving"));
-			//animationComps[0]->SetAnimation(0, "08_walk", true);
+			animationComps[0]->SetAnimation(0, "08_walk", true);
 		}
 		else {
 			UE_LOG(LogTemp, Warning, TEXT("Stop"));
-			//animationComps[0]->ClearTrack(0);
+			animationComps[0]->ClearTrack(0);
 		}
 	}
 }
@@ -71,7 +78,7 @@ void ADefaultPaperCharacter::SwingArmMultiCast_Implementation() {
 	if (hand == nullptr) {
 		return;
 	}
-
+	sphere->WakeRigidBody();
 	swingLeft = kSwingSliceCount;
 	tickCount = 0;
 	degreeEach = -degreeEach;
@@ -165,7 +172,8 @@ void ADefaultPaperCharacter::TickSpringArm() {
 	}
 }
 
-void ADefaultPaperCharacter::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+UFUNCTION()
+void ADefaultPaperCharacter::OnOverlapBegin(UPrimitiveComponent* OverlapComponent, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (this != OtherActor && OtherComp->ComponentHasTag(FName("WeaponBody"))) {
 		if (GEngine) {
@@ -174,29 +182,14 @@ void ADefaultPaperCharacter::OnHit(UPrimitiveComponent* HitComponent, AActor* Ot
 		if (sphere == nullptr) {
 			return;
 		}
-		sphere->WakeRigidBody();
+		
 	}
 }
-
 
 
 void ADefaultPaperCharacter::BeginPlay() {
 	Super::BeginPlay();
 	
-
-	auto capsule = GetCapsuleComponent();
-	capsule->OnComponentHit.AddDynamic(this, &ADefaultPaperCharacter::OnHit);
-
-
-	auto hand = GetHand();
-	TArray<USceneComponent*> object_list;
-	hand->GetChildrenComponents(false, object_list);
-	if (object_list.Num() != 0) {
-		TArray<USceneComponent*> comps;
-		object_list[0]->GetChildrenComponents(false, comps);
-		if (comps.Num() != 0) {
-			sphere = Cast<USphereComponent>(comps[0]);
-			UE_LOG(LogTemp, Warning, TEXT("Found WeaponBody"));
-		}
-	}
+	sphere->OnComponentBeginOverlap.AddDynamic(this, &ADefaultPaperCharacter::OnOverlapBegin);
+	
 }

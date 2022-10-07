@@ -36,6 +36,23 @@ void AMyPlayerController::OnPossess(APawn* aPawn)
 
 void AMyPlayerController::MoveHorizontal(float x) {
 	ADefaultPaperCharacter* myPawn = GetPawn<ADefaultPaperCharacter>();
+	
+	if (FMath::IsNearlyZero(x)) {
+		return;
+	}
+
+	if (bFacingRight != (x > 0)) {
+		bFacingRight = !bFacingRight;
+		if (bFacingRight) {
+			UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 0"));
+			SetControlRotation(FRotator(0, 0, 0));
+		}
+		else {
+			UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 180"));
+			SetControlRotation(FRotator(0, 180, 0));
+		}
+	}
+
 	if (myPawn != nullptr) {
 		myPawn->MoveHorizontal(x);
 	}
