@@ -31,7 +31,7 @@ public:
 
 	/* Animation begin */
 	bool bMoving = false;
-	bool back = false;
+	
 	int StickCount;
 	UFUNCTION()
 	void ToggleMoveAnimation(bool bReqMoving);
@@ -43,16 +43,19 @@ public:
 
 
 	/* swing arm begin */
-	int tickCount = -1;
-	float degreeEach = -15;
-	int swingLeft = 0;
+	float fSwingDegree = 200;
+	float kConstTime = 0.4;//s
+	float fCurrDegree = 0;
+	bool bSwinging = false;
+	bool bHandBack = false; //手是否在后方(开始时在前方)
 
 	UFUNCTION()
 	void SwingArm();
 	UFUNCTION(Server, Reliable)
-	void SwingArmServer();
+	void SwingArmServer(bool bReqHandBack);
 	UFUNCTION(NetMulticast, Reliable)
-	void SwingArmMultiCast();
+	void SwingArmMultiCast(bool bReqHandBack);
+	void TickSpringArm(float DeltaTime);
 	/* swing arm end */
 
 	/* movement begin */
@@ -61,7 +64,8 @@ public:
 	void MoveVertical(float z);
 	/* movement end */
 	
-	void TickSpringArm();
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnPlayerDie(int iPlayerID);
 	
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlapComponent, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

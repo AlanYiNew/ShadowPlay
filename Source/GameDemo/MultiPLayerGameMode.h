@@ -19,6 +19,8 @@ struct FPlayerStartInfo
 	FPlayerStartInfo() : FPlayerStartInfo(nullptr, false) {};
 };
 
+
+
 /**
  * 
  */
@@ -28,10 +30,15 @@ class GAMEDEMO_API AMultiPLayerGameMode : public AGameMode
 	GENERATED_BODY()
 private:
 	
-	TArray<AMyPlayerController*> m_PlayerControllers;
 	TArray<FPlayerStartInfo> m_PlayerStartPointsUsed;
+	TArray<AMyPlayerController*> m_PlayerControllers;
+	
 public:
 	AMultiPLayerGameMode();
+
+	
+
+
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	virtual void InitGameState() override;
 
@@ -40,10 +47,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AMyPlayerController* GetGamePlayPlayerController(int index);
-
+	APlayerStart* GetAvailablePlayerStartPoint();
 
 	
-	APlayerStart* GetAvailablePlayerStartPoint();
 protected:
 	virtual void HandleSeamlessTravelPlayer(AController*& C) override;
 	virtual void SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC) override;

@@ -23,6 +23,13 @@ class GAMEDEMO_API AMyPlayerController : public APlayerController
 		void MoveVertical(float x);
 		void SwingArm();
 		
+		//UFUNCTION(BlueprintImplementableEvent)
+		//void OnConnectedPlayerUpdated(TArray<AMyPlayerController*> playerControllerList);
+		
+		UFUNCTION(BlueprintImplementableEvent)
+		void OnConnectedPlayerUpdated(const TArray<AMyPlayerController*>& playerControllerList);
+
+		
 		
 	protected:
 		virtual void SetupInputComponent() override;

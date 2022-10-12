@@ -3,6 +3,7 @@
 
 #include "MultiPLayerGameMode.h"
 #include "DefaultPaperCharacter.h"
+#include "Net/UnrealNetwork.h"
 
 
 
@@ -27,6 +28,9 @@ AMultiPLayerGameMode::AMultiPLayerGameMode()
 {
 	
 }
+
+
+
 
 
 void AMultiPLayerGameMode::HandleSeamlessTravelPlayer(AController*& C)
@@ -63,7 +67,7 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 		UE_LOG(LogTemp, Error, TEXT("Failed spawn actor"));
 		return;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("ServerRespawnPlayerController Possess"));
+	UE_LOG(LogTemp, Warning, TEXT("ServerRespawnPlayerController Possess %s"), *player_character_class->GetName());
 	player_controller->Possess(pawn);
 	
 }	
@@ -81,7 +85,12 @@ void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlay
 {
 	Super::SwapPlayerControllers(OldPC, NewPC);
 	auto PC = Cast<AMyPlayerController>(NewPC);
-	bool v = (PC == nullptr);
-	UE_LOG(LogTemp, Error, TEXT("SwapPlayerControllers %d"), v);
-	m_PlayerControllers.Push(PC);
+
+	if (PC != nullptr) {
+		m_PlayerControllers.Push(PC);
+		UE_LOG(LogTemp, Warning, TEXT("SwapPlayerControllers %s"), *PC->GetName());
+		PC->OnConnectedPlayerUpdated(m_PlayerControllers);
+	}
 }
+
+

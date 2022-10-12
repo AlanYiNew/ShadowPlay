@@ -7,6 +7,7 @@
 #include "Components/SceneComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "GameFramework/PlayerState.h"
 
 
 #include <algorithm>
@@ -14,7 +15,7 @@
 void ADefaultPaperCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	TickSpringArm();
+	TickSpringArm(DeltaTime);
 }
 
 ADefaultPaperCharacter::ADefaultPaperCharacter() {
@@ -62,26 +63,26 @@ void ADefaultPaperCharacter::ToggleMoveAnimationMultiCast_Implementation(bool bR
 }
 
 void ADefaultPaperCharacter::SwingArm() {
-	if (swingLeft != 0) {
+	if (bSwinging) {
 		return;
 	}
-	swingLeft = kSwingSliceCount;
-	SwingArmServer();
+	bSwinging = true;
+	bHandBack = !bHandBack;
+	SwingArmServer(bHandBack);
 }
 
-void ADefaultPaperCharacter::SwingArmServer_Implementation() {
-	SwingArmMultiCast();
+void ADefaultPaperCharacter::SwingArmServer_Implementation(bool bReqHandBack) {
+	SwingArmMultiCast(bReqHandBack);
 }
 
-void ADefaultPaperCharacter::SwingArmMultiCast_Implementation() {
+void ADefaultPaperCharacter::SwingArmMultiCast_Implementation(bool bReqHandBack) {
 	auto hand = GetHand();
 	if (hand == nullptr) {
 		return;
 	}
 	sphere->WakeRigidBody();
-	swingLeft = kSwingSliceCount;
-	tickCount = 0;
-	degreeEach = -degreeEach;
+	bSwinging = true;
+	bHandBack = bReqHandBack;
 }
 
 void ADefaultPaperCharacter::MoveHorizontal(float Value)
@@ -89,14 +90,12 @@ void ADefaultPaperCharacter::MoveHorizontal(float Value)
 	if (Value) {
 		UE_LOG(LogTemp, Warning, TEXT("%f %s"), Value, *GetHumanReadableName());
 	}
-	//ServerMoveHorizontal(x);
+
 	
 	MyMovementDirection.X = FMath::Clamp(Value, -1.0f, 1.0f);
 	AddMovementInput(MyMovementDirection, 1);
 
 	if (Value) {
-		//UE_LOG(LogTemp, Warning, TEXT("On Possess 1 Moving:%d"), bMoving);
-		UE_LOG(LogTemp, Warning, TEXT("branch1 %f %d %d"), Value, StickCount, bMoving);
 		if (!bMoving) {
 			bMoving = true;
 			ToggleMoveAnimationServer(bMoving);
@@ -105,7 +104,6 @@ void ADefaultPaperCharacter::MoveHorizontal(float Value)
 	}
 	else {
 		StickCount = std::max(4, StickCount+1);
-		UE_LOG(LogTemp, Warning, TEXT("branch2 %f %d %d"), Value, StickCount, bMoving);
 		if (StickCount > 3 && bMoving) {
 			StickCount = 0;
 			bMoving = false;
@@ -128,7 +126,7 @@ void ADefaultPaperCharacter::MoveVertical(float z)
 	}
 }
 
-FMatrix get_rotate_matrix(const FVector& line, float degree) {
+FMatrix GetRotateMatrix(const FVector& line, float degree) {
 	FMatrix m1 = FTranslationMatrix(-line);
 	FMatrix m2 = FRotationMatrix(FRotator(degree, 0, 0));
 	FMatrix m3 = FTranslationMatrix(line);
@@ -149,28 +147,33 @@ UCapsuleComponent* ADefaultPaperCharacter::GetHand() {
 	return nullptr;
 }
 
-void ADefaultPaperCharacter::TickSpringArm() {
+void ADefaultPaperCharacter::TickSpringArm(float DeltaTime) {
 	auto hand = GetHand();
 	if (hand == nullptr) {
 		return;
 	}
 
-	if (swingLeft <= 0) {
+	if (!bSwinging) {
 		return;
 	}
 
-	if (tickCount > 0) {
-		tickCount--;
-	}
-	else if (tickCount == 0) {
-		tickCount--;
-		FVector line(0, 0, hand->GetScaledCapsuleHalfHeight());
-		auto matrix = get_rotate_matrix(line, degreeEach);
-		hand->AddLocalTransform(FTransform(matrix), false, nullptr, ETeleportType::None);
-		if (swingLeft > 0) {
-			swingLeft--;
-			tickCount = 1;
-		}
+	// 计算可以转多少度
+	float fDegree = DeltaTime / kConstTime * fSwingDegree;
+	fDegree = fDegree + fCurrDegree > fSwingDegree ? fSwingDegree - fCurrDegree : fDegree;
+
+	UE_LOG(LogTemp, Warning, TEXT("Swing %f %d"), fCurrDegree, bHandBack);
+
+	// 转动
+	FVector line(0, 0, hand->GetScaledCapsuleHalfHeight());
+	auto matrix = GetRotateMatrix(line, bHandBack ? fDegree : -fDegree);
+	hand->AddLocalTransform(FTransform(matrix), false, nullptr, ETeleportType::None);
+	
+	// 累计转了多少度
+	fCurrDegree += fDegree;
+	// 转够了目标度数
+	if (FMath::IsNearlyZero(fSwingDegree - FMath::Abs(fCurrDegree))) {
+		bSwinging = false;
+		fCurrDegree = 0;
 	}
 }
 
@@ -178,13 +181,16 @@ UFUNCTION()
 void ADefaultPaperCharacter::OnOverlapBegin(UPrimitiveComponent* OverlapComponent, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (this != OtherActor && OtherComp->ComponentHasTag(FName("WeaponBody"))) {
-		if (GEngine) {
-			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("%s Hit by weaponbody"), *GetHumanReadableName()));
-		}
 		if (sphere == nullptr) {
 			return;
 		}
+
+		auto playerState = GetPlayerState();
+		if (playerState == nullptr) {
+			return;
+		}
 		
+		OnPlayerDie(playerState->GetPlayerId());
 	}
 }
 
@@ -195,3 +201,4 @@ void ADefaultPaperCharacter::BeginPlay() {
 	sphere->OnComponentBeginOverlap.AddDynamic(this, &ADefaultPaperCharacter::OnOverlapBegin);
 	
 }
+
