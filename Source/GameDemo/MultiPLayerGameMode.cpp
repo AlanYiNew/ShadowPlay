@@ -89,8 +89,14 @@ void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlay
 	if (PC != nullptr) {
 		m_PlayerControllers.Push(PC);
 		UE_LOG(LogTemp, Warning, TEXT("SwapPlayerControllers %s"), *PC->GetName());
-		PC->OnConnectedPlayerUpdated(m_PlayerControllers);
+
+		for (auto& each : m_PlayerControllers) {
+			each->OnConnectedPlayerUpdated(m_PlayerControllers);
+		}
 	}
+	
+
+
 }
 
 
