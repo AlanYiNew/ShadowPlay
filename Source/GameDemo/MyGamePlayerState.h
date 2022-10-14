@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Containers/UnrealString.h"
 #include "GameFramework/PlayerState.h"
 #include "MyGamePlayerState.generated.h"
+
 
 
 /**
@@ -16,7 +18,22 @@ class GAMEDEMO_API AMyGamePlayerState : public APlayerState
 	GENERATED_BODY()
 public:
 	UPROPERTY(Replicated, BlueprintReadWrite, EditAnywhere)
-	int m_Score = 0;
-	//UPROPERTY(Replicated, BlueprintReadWrite, EditAnywhere)
-	//FString m_CharacterCodeName = 0;
+	int m_score = 0;
+	UPROPERTY(Replicated, BlueprintReadWrite, ReplicatedUsing = OnRep_SelectedCharacterChange)
+	FString m_selected_character;
+
+	//覆写接口
+	void CopyProperties(APlayerState* PlayerState) override;
+
+
+	/*异步事件接口 Begin*/
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnRep_SelectedCharacterChange();
+	/*异步事件接口 End*/
+
+	/*外部接口 Begin*/
+	void SetSelectedCharacter(const FString& selected_character);
+	/*外部接口 End*/
 };
+
+

@@ -43,10 +43,9 @@ public:
 	virtual void InitGameState() override;
 
 	UFUNCTION(Server, BlueprintCallable, Reliable)
-	void ServerRespawnPlayerController(UClass* player_character_class, APlayerController* player_controller);
+	void ServerRespawnPlayerController(UClass* player_character_class, APlayerController* player_controller, const FString& character_name);
 
-	UFUNCTION(BlueprintCallable)
-	AMyPlayerController* GetGamePlayPlayerController(int index);
+
 	APlayerStart* GetAvailablePlayerStartPoint();
 
 	

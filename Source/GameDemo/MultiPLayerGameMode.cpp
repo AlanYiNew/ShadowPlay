@@ -3,6 +3,7 @@
 
 #include "MultiPLayerGameMode.h"
 #include "DefaultPaperCharacter.h"
+#include "MyGamePlayerState.h"
 #include "Net/UnrealNetwork.h"
 
 
@@ -52,7 +53,7 @@ APlayerStart* AMultiPLayerGameMode::GetAvailablePlayerStartPoint()
 	return nullptr;
 }
 
-void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* player_character_class, APlayerController* player_controller)
+void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* player_character_class, APlayerController* player_controller,const FString& character_name)
 {
 	
 	APlayerStart* availablePlayerStart = GetAvailablePlayerStartPoint();
@@ -69,17 +70,13 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 	}
 	UE_LOG(LogTemp, Warning, TEXT("ServerRespawnPlayerController Possess %s"), *player_character_class->GetName());
 	player_controller->Possess(pawn);
+
+	auto player_state = player_controller->GetPlayerState<AMyGamePlayerState>();
+	player_state->SetSelectedCharacter(character_name);
 	
 }	
 
-AMyPlayerController* AMultiPLayerGameMode::GetGamePlayPlayerController(int index)
-{
-	if (index >= m_PlayerControllers.Num()) {
-		return nullptr;
-	}
-	
-	return m_PlayerControllers[index];
-}
+
 
 void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC)
 {
@@ -87,16 +84,15 @@ void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlay
 	auto PC = Cast<AMyPlayerController>(NewPC);
 
 	if (PC != nullptr) {
-		m_PlayerControllers.Push(PC);
-		UE_LOG(LogTemp, Warning, TEXT("SwapPlayerControllers %s"), *PC->GetName());
-
-		for (auto& each : m_PlayerControllers) {
-			each->OnConnectedPlayerUpdated(m_PlayerControllers);
+		if (PC->NetPlayerIndex < m_PlayerControllers.Num()) {
+			m_PlayerControllers[PC->NetPlayerIndex] = PC;
 		}
+		else {
+			m_PlayerControllers.Push(PC);
+		}
+		
+		
 	}
-	
-
-
 }
 
 

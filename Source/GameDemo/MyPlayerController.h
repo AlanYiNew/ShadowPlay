@@ -26,8 +26,7 @@ class GAMEDEMO_API AMyPlayerController : public APlayerController
 		//UFUNCTION(BlueprintImplementableEvent)
 		//void OnConnectedPlayerUpdated(TArray<AMyPlayerController*> playerControllerList);
 		
-		UFUNCTION(BlueprintImplementableEvent)
-		void OnConnectedPlayerUpdated(const TArray<AMyPlayerController*>& playerControllerList);
+
 
 		
 		
