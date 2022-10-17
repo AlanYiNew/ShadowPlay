@@ -14,13 +14,14 @@ void AMyGamePlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
 
 }
 
+/*
 void AMyGamePlayerState::SetSelectedCharacter(const FString& selected_character)  {
 	m_selected_character = selected_character;
 	UE_LOG(LogTemp, Warning, TEXT("character %s"), *m_selected_character);
 	if (GetLocalRole() == ROLE_Authority) {
 		OnRep_SelectedCharacterChange();
 	}
-}
+}*/
 
 void AMyGamePlayerState::CopyProperties(APlayerState* PlayerState) {
 	AMyGamePlayerState* state = Cast<AMyGamePlayerState>(PlayerState);

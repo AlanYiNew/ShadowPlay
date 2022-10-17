@@ -70,10 +70,6 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 	}
 	UE_LOG(LogTemp, Warning, TEXT("ServerRespawnPlayerController Possess %s"), *player_character_class->GetName());
 	player_controller->Possess(pawn);
-
-	auto player_state = player_controller->GetPlayerState<AMyGamePlayerState>();
-	player_state->SetSelectedCharacter(character_name);
-	
 }	
 
 

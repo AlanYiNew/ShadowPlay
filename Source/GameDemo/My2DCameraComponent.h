@@ -16,7 +16,10 @@ class GAMEDEMO_API UMy2DCameraComponent : public UCameraComponent
 private:
 	UPROPERTY(EditDefaultsOnly)
 	float xBoundary = 0;
-	
+	UPROPERTY(EditDefaultsOnly)
+	bool isFixedHeight = false;
+	UPROPERTY(EditDefaultsOnly)
+	float fixedHeight = 0;
 public:
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	UMy2DCameraComponent();

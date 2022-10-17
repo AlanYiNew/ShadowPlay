@@ -15,5 +15,9 @@ void UMy2DCameraComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	if (FMath::Abs(location.X) > xBoundary) {
 		location.X = FMath::Sign(location.X) * xBoundary;
 	}
+
+	if (isFixedHeight && location.Z != fixedHeight) {
+		location.Z = fixedHeight;
+	}
 	SetWorldLocation(location);
 }
