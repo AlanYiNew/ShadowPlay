@@ -24,9 +24,10 @@ void AMyGamePlayerState::SetSelectedCharacter(const FString& selected_character)
 }*/
 
 void AMyGamePlayerState::CopyProperties(APlayerState* PlayerState) {
+	Super::CopyProperties(PlayerState);
 	AMyGamePlayerState* state = Cast<AMyGamePlayerState>(PlayerState);
 	if (state != nullptr) {
-		m_selected_character = state->m_selected_character;
-		m_score = state->m_score;
+		state->m_selected_character =m_selected_character ;
+		state->m_score = m_score;
 	}
 }
