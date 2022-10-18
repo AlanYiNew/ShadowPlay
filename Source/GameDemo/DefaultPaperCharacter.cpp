@@ -180,18 +180,28 @@ void ADefaultPaperCharacter::TickSpringArm(float DeltaTime) {
 UFUNCTION()
 void ADefaultPaperCharacter::OnOverlapBegin(UPrimitiveComponent* OverlapComponent, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (this != OtherActor && OtherComp->ComponentHasTag(FName("WeaponBody"))) {
-		if (sphere == nullptr) {
-			return;
-		}
-
-		auto playerState = GetPlayerState();
-		if (playerState == nullptr) {
-			return;
-		}
-		
-		OnPlayerDie(playerState->GetPlayerId());
+	if (OtherActor->GetParentActor() == nullptr) {
+		return;
 	}
+	AActor* ParentActor = OtherActor->GetParentActor();
+	if (ParentActor->IsOwnedBy(this)) {
+		return;
+	}
+
+	if (!OtherComp->ComponentHasTag(FName("WeaponBody"))) {
+		return;
+	}
+
+	if (sphere == nullptr) {
+		return;
+	}
+
+	auto playerState = GetPlayerState();
+	if (playerState == nullptr) {
+		return;
+	}
+
+	OnPlayerDie(playerState->GetPlayerId());
 }
 
 
