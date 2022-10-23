@@ -6,6 +6,7 @@
 #include "PaperCharacter.h"
 #include "CoreMinimal.h"
 #include "CoreFwd.h"
+#include "Weapon.h"
 #include "DefaultPaperCharacter.generated.h"
 
 class USphereComponent;
@@ -22,8 +23,13 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* sphere = nullptr;
 	UCapsuleComponent* GetHand();
+	AWeapon* GetWeapon();
+	void WakeAllComponents(USceneComponent* actor);
+	
 public:
-
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	bool bCanChangeDirection = false;
 	ADefaultPaperCharacter();
 	// Called every frame
 	void Tick(float DeltaTime) override;

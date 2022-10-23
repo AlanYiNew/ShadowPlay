@@ -22,14 +22,14 @@ class GAMEDEMO_API AMyPlayerController : public APlayerController
 		void MoveHorizontal(float x);
 		void MoveVertical(float x);
 		void SwingArm();
+		void SetControllerDirection(bool bFacingRight);
+		void BeginPlay() override;
+
 		
 		//UFUNCTION(BlueprintImplementableEvent)
 		//void OnConnectedPlayerUpdated(TArray<AMyPlayerController*> playerControllerList);
 		
 
-
-		
-		
 	protected:
 		virtual void SetupInputComponent() override;
 		virtual void OnPossess(APawn* aPawn) override;

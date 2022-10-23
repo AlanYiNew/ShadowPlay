@@ -20,16 +20,16 @@ void ADefaultPaperCharacter::Tick(float DeltaTime)
 
 ADefaultPaperCharacter::ADefaultPaperCharacter() {
 	PrimaryActorTick.bCanEverTick = true;
-
+	
 	sphere = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Sphere"));
-	sphere->SetupAttachment(GetRootComponent());
+	sphere->SetupAttachment(RootComponent);
 }
 
 /*
 void ADefaultPaperCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	
-	//DOREPLIFETIME(ADefaultPaperCharacter, bMoving);
+	DOREPLIFETIME(ADefaultPaperCharacter, bIsLeft);
 	//DOREPLIFETIME(ADefaultPaperCharacter, bPrevMoving);
 	//DOREPLIFETIME(ADefaultPaperCharacter, StickCount);
 	
@@ -68,6 +68,7 @@ void ADefaultPaperCharacter::SwingArm() {
 	}
 	bSwinging = true;
 	bHandBack = !bHandBack;
+	UE_LOG(LogTemp, Warning, TEXT("SwingArm Server"));
 	SwingArmServer(bHandBack);
 }
 
@@ -75,12 +76,37 @@ void ADefaultPaperCharacter::SwingArmServer_Implementation(bool bReqHandBack) {
 	SwingArmMultiCast(bReqHandBack);
 }
 
+AWeapon* ADefaultPaperCharacter::GetWeapon() {
+	auto hand = GetHand();
+	auto weapon = hand->GetChildComponent(1);
+	if (weapon) {
+		UE_LOG(LogTemp, Warning, TEXT("%s %x"), *weapon->GetReadableName(), Cast<AWeapon>(weapon));
+	}
+	TArray<USceneComponent*> object_list;
+	weapon->GetChildrenComponents(false, object_list);
+	int i = 0;
+	for (auto& each : object_list) {
+		if (each->GetOwner()) {
+			return Cast<AWeapon>(each->GetOwner());
+		}
+	}
+	return nullptr;
+}
+
+
+
 void ADefaultPaperCharacter::SwingArmMultiCast_Implementation(bool bReqHandBack) {
 	auto hand = GetHand();
-	if (hand == nullptr) {
+	auto weapon = GetWeapon();
+	if (hand == nullptr ) {
 		return;
 	}
-	sphere->WakeRigidBody();
+	
+	if (weapon) {
+		weapon->WakeUpAllRigidBody();
+	}
+	
+	//sphere->WakeRigidBody();
 	bSwinging = true;
 	bHandBack = bReqHandBack;
 }
@@ -135,6 +161,7 @@ FMatrix GetRotateMatrix(const FVector& line, float degree) {
 
 UCapsuleComponent* ADefaultPaperCharacter::GetHand() {
 	auto capsule = GetCapsuleComponent();
+
 	TArray<USceneComponent*> object_list;
 	capsule->GetChildrenComponents(false, object_list);
 	int i = 0;
@@ -148,12 +175,12 @@ UCapsuleComponent* ADefaultPaperCharacter::GetHand() {
 }
 
 void ADefaultPaperCharacter::TickSpringArm(float DeltaTime) {
-	auto hand = GetHand();
-	if (hand == nullptr) {
+	if (!bSwinging) {
 		return;
 	}
 
-	if (!bSwinging) {
+	auto hand = GetHand();
+	if (hand == nullptr) {
 		return;
 	}
 
@@ -161,7 +188,7 @@ void ADefaultPaperCharacter::TickSpringArm(float DeltaTime) {
 	float fDegree = DeltaTime / kConstTime * fSwingDegree;
 	fDegree = fDegree + fCurrDegree > fSwingDegree ? fSwingDegree - fCurrDegree : fDegree;
 
-	UE_LOG(LogTemp, Warning, TEXT("Swing %f %d"), fCurrDegree, bHandBack);
+	
 
 	// ×ª¶¯
 	FVector line(0, 0, hand->GetScaledCapsuleHalfHeight());
@@ -211,4 +238,3 @@ void ADefaultPaperCharacter::BeginPlay() {
 	sphere->OnComponentBeginOverlap.AddDynamic(this, &ADefaultPaperCharacter::OnOverlapBegin);
 	
 }
-

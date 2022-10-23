@@ -30,10 +30,6 @@ AMultiPLayerGameMode::AMultiPLayerGameMode()
 	
 }
 
-
-
-
-
 void AMultiPLayerGameMode::HandleSeamlessTravelPlayer(AController*& C)
 {	
 	Super::HandleSeamlessTravelPlayer(C);
@@ -55,15 +51,13 @@ APlayerStart* AMultiPLayerGameMode::GetAvailablePlayerStartPoint()
 
 void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* player_character_class, APlayerController* player_controller,const FString& character_name)
 {
-	
 	APlayerStart* availablePlayerStart = GetAvailablePlayerStartPoint();
 	if (availablePlayerStart == nullptr) {
 		UE_LOG(LogTemp, Error, TEXT("Failed GetAvailablePlayerStartPoint"));
 		return;
 	}
 
-	
-	APawn* pawn = Cast<APawn>(GetWorld()->SpawnActor<ADefaultPaperCharacter>(player_character_class, availablePlayerStart->GetActorTransform()));
+	ADefaultPaperCharacter* pawn = Cast<ADefaultPaperCharacter>(GetWorld()->SpawnActor<ADefaultPaperCharacter>(player_character_class, availablePlayerStart->GetActorTransform()));
 	if (pawn == nullptr) {
 		UE_LOG(LogTemp, Error, TEXT("Failed spawn actor"));
 		return;
@@ -71,6 +65,13 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 	UE_LOG(LogTemp, Warning, TEXT("ServerRespawnPlayerController Possess %s"), *player_character_class->GetName());
 	player_controller->Possess(pawn);
 }	
+
+bool AMultiPLayerGameMode::IsServer(APlayerController* controller) {
+	if (controller->GetRemoteRole() == ROLE_SimulatedProxy && controller->GetLocalRole() == ROLE_Authority) {
+		return true;
+	}
+	return false;
+}
 
 
 
@@ -86,8 +87,6 @@ void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlay
 		else {
 			m_PlayerControllers.Push(PC);
 		}
-		
-		
 	}
 }
 

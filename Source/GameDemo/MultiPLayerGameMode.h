@@ -36,7 +36,8 @@ private:
 public:
 	AMultiPLayerGameMode();
 
-	
+	UFUNCTION(BlueprintCallable)
+	bool IsServer(APlayerController* player_controller);
 
 
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;

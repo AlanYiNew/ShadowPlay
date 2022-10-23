@@ -10,6 +10,7 @@
 AMyPlayerController::AMyPlayerController() {
 	//AutoReceiveInput = EAutoReceiveInput::Player0;
 	UE_LOG(LogTemp, Warning, TEXT("AMyPlayerController %s"), *this->GetHumanReadableName());
+	
 }
 
 // Called to bind functionality to input
@@ -27,6 +28,8 @@ void AMyPlayerController::SetupInputComponent()
 void AMyPlayerController::OnPossess(APawn* aPawn)
 {
 	Super::OnPossess(aPawn);
+
+	ADefaultPaperCharacter* paper_character = Cast<ADefaultPaperCharacter>(aPawn);
 	
 	UE_LOG(LogTemp, Warning, TEXT("OnPossess %s"), *this->GetHumanReadableName());
 	
@@ -37,22 +40,33 @@ void AMyPlayerController::OnPossess(APawn* aPawn)
 void AMyPlayerController::MoveHorizontal(float x) {
 	ADefaultPaperCharacter* myPawn = GetPawn<ADefaultPaperCharacter>();
 	
-
-
-	if (!FMath::IsNearlyZero(x) && bFacingRight != (x > 0)) {
-		bFacingRight = !bFacingRight;
-		if (bFacingRight) {
-			UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 0"));
-			SetControlRotation(FRotator(0, 0, 0));
-		}
-		else {
-			UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 180"));
-			SetControlRotation(FRotator(0, 180, 0));
-		}
-	}
-
 	if (myPawn != nullptr) {
+		if (myPawn->bCanChangeDirection && !FMath::IsNearlyZero(x) && bFacingRight != (x > 0)) {
+			SetControllerDirection(!bFacingRight);
+		}
+
 		myPawn->MoveHorizontal(x);
+	}
+}
+
+
+void AMyPlayerController::SetControllerDirection(bool bSetFacingRight) {
+	bFacingRight = bSetFacingRight;
+	if (bFacingRight) {
+		UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 0"));
+		SetControlRotation(FRotator(0, 0, 0));
+	}
+	else {
+		UE_LOG(LogTemp, Warning, TEXT("MoveHorizontal 180 %s %d"), *GetHumanReadableName(), IsLocalController());
+		SetControlRotation(FRotator(0, 180, 0));
+	}
+}
+
+void AMyPlayerController::BeginPlay() {
+	Super::BeginPlay();
+	
+	if (IsLocalController() && GetLocalRole() != ROLE_Authority) {
+		SetControllerDirection(!bFacingRight);
 	}
 }
 
