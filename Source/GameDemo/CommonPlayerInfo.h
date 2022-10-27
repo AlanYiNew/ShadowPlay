@@ -3,12 +3,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CommonPlayerInfo.generated.h"
-?
+
 USTRUCT(BlueprintType)
 struct FCommonPlayerInfo
 {
     GENERATED_USTRUCT_BODY()
 
 public:
-    ?
 };

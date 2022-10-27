@@ -13,5 +13,16 @@ UCLASS()
 class GAMEDEMO_API ACommonGameMode : public AGameMode
 {
 	GENERATED_BODY()
+private:
 	
+
+public:
+	UPROPERTY(Replicated, BlueprintReadOnly)
+	TArray<APlayerController*> AllControllers;
+
+	void PostLogin(APlayerController* NewPlayer) override;
+	void Logout(AController* Exiting) override;
+
+	UFUNCTION(BlueprintCallable)
+	TArray<APlayerController*> GetAllControllers();
 };
