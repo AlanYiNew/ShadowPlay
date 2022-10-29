@@ -3,6 +3,7 @@
 /Intermediate
 /Saved
 /.vs
+/.idea
 *.sln
 *.sdf
 *.suo
