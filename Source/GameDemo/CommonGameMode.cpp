@@ -2,12 +2,19 @@
 
 
 #include "CommonGameMode.h"
+
+#include "CommonPlayerController.h"
 #include "Net/UnrealNetwork.h"
 
 void ACommonGameMode::PostLogin(APlayerController* NewPlayer) {
 	
 	if (NewPlayer->HasAuthority()) {
 		AllControllers.Push(NewPlayer);
+		auto controller = Cast<ACommonPlayerController>(NewPlayer);
+		if (controller)
+		{
+			controller->SetOwnByServer(AllControllers.Num() == 1);
+		}
 	}
 	Super::PostLogin(NewPlayer);
 }
@@ -34,4 +41,17 @@ void ACommonGameMode::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
 
 TArray<APlayerController*> ACommonGameMode::GetAllControllers() {
 	return AllControllers;
+}
+
+void ACommonGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPlayer)
+{
+	Super::SwapPlayerControllers(OldPC, NewPlayer);
+	if (NewPlayer->HasAuthority()) {
+		AllControllers.Push(NewPlayer);
+	}
+	ACommonPlayerController* controller = Cast<ACommonPlayerController>(NewPlayer);
+	if (controller)
+	{
+		controller->SetOwnByServer(AllControllers.Num() == 1);
+	}
 }

@@ -36,9 +36,8 @@ void AWeapon::Tick(float DeltaTime)
 
 void AWeapon::WakeUpAllRigidBody()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Wake ggg"));
+	
 	for (auto x : chain_springs) {
-		UE_LOG(LogTemp, Warning, TEXT("Wake %s"), *x->GetReadableName());
 		x->WakeRigidBody();
 	}
 	sphere->WakeRigidBody();

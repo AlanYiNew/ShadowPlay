@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CommonPlayerController.h"
 #include "GameFramework/PlayerController.h"
 #include "MyPlayerController.generated.h"
 
@@ -11,13 +12,14 @@ class UInputComponent;
  * 
  */
 UCLASS()
-class GAMEDEMO_API AMyPlayerController : public APlayerController
+class GAMEDEMO_API AMyPlayerController : public ACommonPlayerController
 {
 	GENERATED_BODY()
 	private:
-		bool bFacingRight = true;
+		
 
 	public:
+		bool bFacingRight = true;
 		AMyPlayerController();
 		void MoveHorizontal(float x);
 		void MoveVertical(float x);

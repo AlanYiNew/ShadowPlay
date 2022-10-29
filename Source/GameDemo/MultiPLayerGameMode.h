@@ -6,6 +6,8 @@
 #include "GameFramework/GameMode.h"
 #include "MyPlayerController.h"
 #include <GameFramework/PlayerStart.h>
+
+#include "CommonGameMode.h"
 #include "MultiPLayerGameMode.generated.h"
 
 
@@ -25,7 +27,7 @@ struct FPlayerStartInfo
  * 
  */
 UCLASS()
-class GAMEDEMO_API AMultiPLayerGameMode : public AGameMode
+class GAMEDEMO_API AMultiPLayerGameMode : public ACommonGameMode
 {
 	GENERATED_BODY()
 private:

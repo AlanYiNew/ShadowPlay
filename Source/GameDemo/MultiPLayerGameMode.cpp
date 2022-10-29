@@ -73,8 +73,6 @@ bool AMultiPLayerGameMode::IsServer(APlayerController* controller) {
 	return false;
 }
 
-
-
 void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC)
 {
 	Super::SwapPlayerControllers(OldPC, NewPC);

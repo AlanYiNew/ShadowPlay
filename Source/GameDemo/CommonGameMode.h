@@ -25,4 +25,5 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	TArray<APlayerController*> GetAllControllers();
+	void SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC) override;
 };
