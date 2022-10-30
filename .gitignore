@@ -4,6 +4,7 @@
 /Saved
 /.vs
 /.idea
+/Plugins/Developer
 *.sln
 *.sdf
 *.suo
