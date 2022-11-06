@@ -66,12 +66,7 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 	player_controller->Possess(pawn);
 }	
 
-bool AMultiPLayerGameMode::IsServer(APlayerController* controller) {
-	if (controller->GetRemoteRole() == ROLE_SimulatedProxy && controller->GetLocalRole() == ROLE_Authority) {
-		return true;
-	}
-	return false;
-}
+
 
 void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC)
 {

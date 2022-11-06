@@ -15,7 +15,7 @@ struct FColor;
 #endif
 #define SPINEPLUGIN_SpineSkeletonComponent_generated_h
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_41_DELEGATE \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_41_DELEGATE \
 struct _Script_SpinePlugin_eventSpineBeforeUpdateWorldTransformDelegate_Parms \
 { \
 	USpineSkeletonComponent* skeleton; \
@@ -28,7 +28,7 @@ static inline void FSpineBeforeUpdateWorldTransformDelegate_DelegateWrapper(cons
 }
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_42_DELEGATE \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_42_DELEGATE \
 struct _Script_SpinePlugin_eventSpineAfterUpdateWorldTransformDelegate_Parms \
 { \
 	USpineSkeletonComponent* skeleton; \
@@ -41,8 +41,8 @@ static inline void FSpineAfterUpdateWorldTransformDelegate_DelegateWrapper(const
 }
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetAnimationDuration); \
 	DECLARE_FUNCTION(execHasAnimation); \
@@ -69,7 +69,7 @@ static inline void FSpineAfterUpdateWorldTransformDelegate_DelegateWrapper(const
 	DECLARE_FUNCTION(execGetSkins);
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetAnimationDuration); \
 	DECLARE_FUNCTION(execHasAnimation); \
@@ -96,7 +96,7 @@ static inline void FSpineAfterUpdateWorldTransformDelegate_DelegateWrapper(const
 	DECLARE_FUNCTION(execGetSkins);
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS_NO_PURE_DECLS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSpineSkeletonComponent(); \
 	friend struct Z_Construct_UClass_USpineSkeletonComponent_Statics; \
@@ -105,7 +105,7 @@ public: \
 	DECLARE_SERIALIZER(USpineSkeletonComponent)
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS \
 private: \
 	static void StaticRegisterNativesUSpineSkeletonComponent(); \
 	friend struct Z_Construct_UClass_USpineSkeletonComponent_Statics; \
@@ -114,7 +114,7 @@ public: \
 	DECLARE_SERIALIZER(USpineSkeletonComponent)
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_STANDARD_CONSTRUCTORS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineSkeletonComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineSkeletonComponent) \
@@ -127,7 +127,7 @@ private: \
 public:
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_ENHANCED_CONSTRUCTORS \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USpineSkeletonComponent(USpineSkeletonComponent&&); \
@@ -138,25 +138,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USpineSkeletonComponent)
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_45_PROLOG
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_GENERATED_BODY_LEGACY \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_45_PROLOG
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_STANDARD_CONSTRUCTORS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_GENERATED_BODY \
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS_NO_PURE_DECLS \
-	FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_ENHANCED_CONSTRUCTORS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_SPARSE_DATA \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_INCLASS_NO_PURE_DECLS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_47_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -164,7 +164,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SPINEPLUGIN_API UClass* StaticClass<class USpineSkeletonComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h
+#define CURRENT_FILE_ID FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

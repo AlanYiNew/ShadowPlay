@@ -7,14 +7,13 @@
 #include "Net/UnrealNetwork.h"
 
 void ACommonGameMode::PostLogin(APlayerController* NewPlayer) {
-	
 	if (NewPlayer->HasAuthority()) {
 		AllControllers.Push(NewPlayer);
-		auto controller = Cast<ACommonPlayerController>(NewPlayer);
-		if (controller)
-		{
-			controller->SetOwnByServer(AllControllers.Num() == 1);
-		}
+	}
+	auto common_player = Cast<ACommonPlayerController>(NewPlayer);
+	if (common_player)
+	{
+		common_player->bIsGameOwner = IsGameOwner(NewPlayer);
 	}
 	Super::PostLogin(NewPlayer);
 }
@@ -49,9 +48,19 @@ void ACommonGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerCon
 	if (NewPlayer->HasAuthority()) {
 		AllControllers.Push(NewPlayer);
 	}
-	ACommonPlayerController* controller = Cast<ACommonPlayerController>(NewPlayer);
-	if (controller)
+	auto CommonPlayer = Cast<ACommonPlayerController>(NewPlayer);
+	if (CommonPlayer)
 	{
-		controller->SetOwnByServer(AllControllers.Num() == 1);
+		CommonPlayer->bIsGameOwner = IsGameOwner(NewPlayer);
 	}
+	
+}
+
+bool ACommonGameMode::IsGameOwner(AController* player_controller)
+{
+	if (AllControllers.Num() != 0 && player_controller == AllControllers[0])
+	{
+		return true;
+	}
+	return false;
 }

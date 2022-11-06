@@ -13,8 +13,10 @@
 
 #include <algorithm>
 
+#include "CommonGameMode.h"
 #include "MyPlayerController.h"
 #include "PaperSprite.h"
+#include "Kismet/GameplayStatics.h"
 
 void ADefaultPaperCharacter::Tick(float DeltaTime)
 {
@@ -45,6 +47,7 @@ ADefaultPaperCharacter::ADefaultPaperCharacter() {
 	RightLeg->SetupAttachment(RootComponent);
 	RightFeet->SetupAttachment(RightLeg);
 	Head->SetupAttachment(RootComponent);
+	sphere->OnComponentBeginOverlap.AddDynamic(this, &ADefaultPaperCharacter::OnOverlapBegin);
 }
 
 /*
@@ -187,8 +190,8 @@ float ADefaultPaperCharacter::MoveLegDegree(UPaperSpriteComponent* comp, float f
 	}
 	
 	auto scale = comp->GetRelativeScale3D();
-	auto sourceSize = sprite->GetSourceSize();
-	FVector line(0, 0, sourceSize.Y*scale.Y/2);
+	auto sourceSize = sprite->GetBakedTexture()->GetSurfaceHeight();
+	FVector line(0, 0, sourceSize*scale.Y/2);
 
 	RotateAroundLine(comp, line, fDegree);
 	return fDegree;
@@ -240,8 +243,8 @@ void ADefaultPaperCharacter::TickSpringArm(float DeltaTime) {
 	}
 
 	auto scale = RightHand->GetRelativeScale3D();
-	auto sourceSize = sprite->GetSourceSize();
-	FVector line(0, 0, sourceSize.Y*scale.Y/2);
+	auto sourceSize = sprite->GetBakedTexture()->GetSurfaceHeight();
+	FVector line(0, 0, sourceSize*scale.Y/2);
 	RotateAroundLine(RightHand, line, bHandBack ? fDegree : -fDegree);
 	
 
@@ -283,7 +286,7 @@ void ADefaultPaperCharacter::OnOverlapBegin(UPrimitiveComponent* OverlapComponen
 void ADefaultPaperCharacter::BeginPlay() {
 	Super::BeginPlay();
 	
-	sphere->OnComponentBeginOverlap.AddDynamic(this, &ADefaultPaperCharacter::OnOverlapBegin);
+	
 }
 
 void ADefaultPaperCharacter::TickArmMove(float DeltaTime)
@@ -306,17 +309,16 @@ void ADefaultPaperCharacter::TickArmMove(float DeltaTime)
 		fDegree = FMath::Sign(fDegree) * (fArmDegree - FMath::Abs(fCurArmDegree));
 	}
 	auto scale = LeftHand->GetRelativeScale3D();
-	auto sourceSize = sprite->GetSourceSize();
-	FVector line(0, 0, sourceSize.Y*scale.Y/2);
-	
+	auto sourceSize = sprite->GetBakedTexture()->GetSurfaceHeight();
+	FVector line(0, 0, sourceSize*scale.Y/2);
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *line.ToString());
 	RotateAroundLine(LeftHand, line, fDegree);
 	fCurArmDegree += fDegree;
 }
 
 void ADefaultPaperCharacter::SetFacingDirection(bool bReqFacingRight)
 {
-	UE_LOG(LogTemp, Warning, TEXT("1tyqqtttt %d"), bReqFacingRight);
-	UE_LOG(LogTemp, Warning, TEXT("2tyqqtttt %d"), bFacingRight);
+	UE_LOG(LogTemp, Warning, TEXT("1tyqqtttt %d %d"), bReqFacingRight, bFacingRight);
 	if (bReqFacingRight != bFacingRight)
 	{
 		auto locationLeft = LeftHand->GetRelativeLocation();
@@ -334,7 +336,8 @@ void ADefaultPaperCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	auto controller = Cast<AMyPlayerController>(NewController);
 
-	if (controller->HasAuthority() && !controller->IsOwnByServer())
+	ACommonGameMode* game_mode = Cast<ACommonGameMode>(UGameplayStatics::GetGameMode(this));
+	if (game_mode != nullptr && !game_mode->IsGameOwner(NewController))
 	{
 		SetFacingDirection(!bFacingRight);
 	}

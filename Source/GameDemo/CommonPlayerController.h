@@ -15,9 +15,6 @@ class GAMEDEMO_API ACommonPlayerController : public APlayerController
 	GENERATED_BODY()
 
 	public:
-		UPROPERTY(Replicated, BlueprintReadOnly)
-		bool bOwnByServer = false;
-
-		void SetOwnByServer(bool bOwnByServer);
-		bool IsOwnByServer(){return bOwnByServer;};	
+	UPROPERTY(Replicated)
+	bool bIsGameOwner{};
 };

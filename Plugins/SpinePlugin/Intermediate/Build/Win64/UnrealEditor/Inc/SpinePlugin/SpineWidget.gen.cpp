@@ -2055,15 +2055,15 @@ void EmptyLinkFunctionForGeneratedCodeSpineWidget() {}
 		return USpineWidget::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USpineWidget);
-	struct Z_CompiledInDeferFile_FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics
+	struct Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_USpineWidget, USpineWidget::StaticClass, TEXT("USpineWidget"), &Z_Registration_Info_UClass_USpineWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpineWidget), 219265524U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_1817356707(TEXT("/Script/SpinePlugin"),
-		Z_CompiledInDeferFile_FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_1817356707(TEXT("/Script/SpinePlugin"),
+		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

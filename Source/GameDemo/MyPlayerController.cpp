@@ -61,7 +61,7 @@ void AMyPlayerController::SetControllerDirection(bool bSetFacingRight) {
 void AMyPlayerController::BeginPlay() {
 	Super::BeginPlay();
 	
-	if (GetLocalRole() == ROLE_AutonomousProxy) {
+	if (!bIsGameOwner) {
 		SetControllerDirection(!bFacingRight);
 	}
 }

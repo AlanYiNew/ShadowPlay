@@ -22,20 +22,8 @@ public:
 	UPROPERTY(Replicated, BlueprintReadWrite, EditAnywhere)
 	FString m_selected_character = "DefaultCharacter";
 
-	//覆写接口
 	void CopyProperties(APlayerState* PlayerState) override;
-
-	/*
-	//异步事件接口 Begin
-	UFUNCTION(BlueprintImplementableEvent)
-	void OnRep_SelectedCharacterChange();
-	//异步事件接口 End
-
-	//外部接口 Begin
-	void SetSelectedCharacter(const FString& selected_character);
-	//外部接口 End
-	*/
-
+	
 };
 
 

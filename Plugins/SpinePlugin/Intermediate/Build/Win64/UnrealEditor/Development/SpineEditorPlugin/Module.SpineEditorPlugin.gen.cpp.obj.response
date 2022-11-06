@@ -1,10 +1,10 @@
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp"
+"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp"
 /I .
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private"
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Source\SpinePlugin\Public\spine-cpp\include"
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Inc\SpineEditorPlugin"
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Source"
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Source\SpinePlugin\Public\spine-cpp\include"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Inc\SpineEditorPlugin"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Source"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public"
 /I Runtime
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
@@ -256,8 +256,8 @@
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController
 /I Developer\AnimationDataController\Public
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Inc\SpinePlugin"
-/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Source\SpinePlugin\Public"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Inc\SpinePlugin"
+/I "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Source\SpinePlugin\Public"
 /I ..\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UnrealEditor\Inc\ProceduralMeshComponent
 /I ..\Plugins\Runtime\ProceduralMeshComponent\Source
 /I ..\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public
@@ -281,12 +281,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Intermediate\Build\Win64\GameDemoEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
-/FI"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Definitions.SpineEditorPlugin.h"
-/Yu"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Intermediate\Build\Win64\GameDemoEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
-/Fp"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Intermediate\Build\Win64\GameDemoEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
-/Fo"C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
-/sourceDependencies "C:\Users\Alan\Documents\Unreal Projects\GameDemo\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.json"
+/FI"..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/FI"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Definitions.SpineEditorPlugin.h"
+/Yu"..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/Fp"..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
+/Fo"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
+/sourceDependencies "C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.json"
 /Zc:inline
 /nologo
 /Oi
