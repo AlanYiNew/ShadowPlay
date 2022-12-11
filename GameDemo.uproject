@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.0",
+	"EngineAssociation": "{B41BE265-43FA-96F2-9C2D-77BBCE274D18}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -23,10 +23,6 @@
 			"TargetAllowList": [
 				"Editor"
 			]
-		},
-		{
-			"Name": "OnlineSubsystemSteam",
-			"Enabled": true
 		}
 	]
 }
