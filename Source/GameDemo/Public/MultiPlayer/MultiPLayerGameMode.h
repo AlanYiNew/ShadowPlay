@@ -4,10 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameMode.h"
-#include "MyPlayerController.h"
 #include <GameFramework/PlayerStart.h>
-
-#include "CommonGameMode.h"
+#include "Common/CommonGameMode.h"
 #include "MultiPLayerGameMode.generated.h"
 
 

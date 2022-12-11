@@ -5,6 +5,7 @@
 #include "DefaultPaperCharacter.h"
 #include "MyGamePlayerState.h"
 #include "Net/UnrealNetwork.h"
+#include "MyPlayerController.h"
 
 
 
