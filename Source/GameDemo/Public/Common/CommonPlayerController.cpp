@@ -10,5 +10,5 @@
 
 void ACommonPlayerController::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(ACommonPlayerController, bIsGameOwner);
+	DOREPLIFETIME(ACommonPlayerController, bOwnByServer);
 }

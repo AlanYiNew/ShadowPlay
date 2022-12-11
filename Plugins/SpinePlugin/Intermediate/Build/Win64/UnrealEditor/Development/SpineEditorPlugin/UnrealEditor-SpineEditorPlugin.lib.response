@@ -7,14 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
-<<<<<<< HEAD
 "C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.cpp.obj"
 "C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Default.rc2.res"
 /OUT:"C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\UnrealEditor-SpineEditorPlugin.lib"
-=======
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.cpp.obj"
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
-"..\Intermediate\Build\Win64\UnrealEditor\Development\Default.rc2.res"
-/OUT:"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\UnrealEditor-SpineEditorPlugin.lib"
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e

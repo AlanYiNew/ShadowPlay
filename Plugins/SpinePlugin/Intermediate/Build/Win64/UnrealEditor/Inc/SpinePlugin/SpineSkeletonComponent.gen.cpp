@@ -1351,7 +1351,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineSkeletonComponent() {}
 		return USpineSkeletonComponent::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USpineSkeletonComponent);
-<<<<<<< HEAD
 	struct Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -1361,17 +1360,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineSkeletonComponent() {}
 	};
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_2335451255(TEXT("/Script/SpinePlugin"),
 		Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics::ClassInfo),
-=======
-	struct Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics
-	{
-		static const FClassRegisterCompiledInInfo ClassInfo[];
-	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USpineSkeletonComponent, USpineSkeletonComponent::StaticClass, TEXT("USpineSkeletonComponent"), &Z_Registration_Info_UClass_USpineSkeletonComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpineSkeletonComponent), 2101987716U) },
-	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_2335451255(TEXT("/Script/SpinePlugin"),
-		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonComponent_h_Statics::ClassInfo),
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

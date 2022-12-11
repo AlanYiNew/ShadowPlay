@@ -67,15 +67,9 @@ void AMultiPLayerGameMode::ServerRespawnPlayerController_Implementation(UClass* 
 	player_controller->Possess(pawn);
 }	
 
-<<<<<<< HEAD:Source/GameDemo/Public/MultiPlayer/MultiPLayerGameMode.cpp
-=======
-
-
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e:Source/GameDemo/MultiPLayerGameMode.cpp
 void AMultiPLayerGameMode::SwapPlayerControllers(APlayerController* OldPC, APlayerController* NewPC)
 {
 	Super::SwapPlayerControllers(OldPC, NewPC);
-	
 }
 
 

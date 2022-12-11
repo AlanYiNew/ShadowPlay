@@ -231,7 +231,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineBoneDriverComponent() {}
 		return USpineBoneDriverComponent::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USpineBoneDriverComponent);
-<<<<<<< HEAD
 	struct Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -241,17 +240,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineBoneDriverComponent() {}
 	};
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_638932811(TEXT("/Script/SpinePlugin"),
 		Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics::ClassInfo),
-=======
-	struct Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics
-	{
-		static const FClassRegisterCompiledInInfo ClassInfo[];
-	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USpineBoneDriverComponent, USpineBoneDriverComponent::StaticClass, TEXT("USpineBoneDriverComponent"), &Z_Registration_Info_UClass_USpineBoneDriverComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpineBoneDriverComponent), 1259840458U) },
-	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_638932811(TEXT("/Script/SpinePlugin"),
-		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineBoneDriverComponent_h_Statics::ClassInfo),
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

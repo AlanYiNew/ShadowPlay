@@ -13,66 +13,38 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPINEPLUGIN_SpineAtlasAsset_generated_h
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_SPARSE_DATA
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS_NO_PURE_DECLS
 #if WITH_EDITORONLY_DATA
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_SPARSE_DATA
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS_NO_PURE_DECLS
-#if WITH_EDITORONLY_DATA
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	DECLARE_FSTRUCTUREDARCHIVE_SERIALIZER(USpineAtlasAsset, NO_API)
 
 
 #else
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
 #endif
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS_NO_PURE_DECLS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
-#endif
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS_NO_PURE_DECLS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineAtlasAsset(); \
 	friend struct Z_Construct_UClass_USpineAtlasAsset_Statics; \
 public: \
 	DECLARE_CLASS(USpineAtlasAsset, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SpinePlugin"), NO_API) \
 	DECLARE_SERIALIZER(USpineAtlasAsset) \
-<<<<<<< HEAD
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
 
 
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS \
-=======
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
-
-
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineAtlasAsset(); \
 	friend struct Z_Construct_UClass_USpineAtlasAsset_Statics; \
 public: \
 	DECLARE_CLASS(USpineAtlasAsset, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SpinePlugin"), NO_API) \
 	DECLARE_SERIALIZER(USpineAtlasAsset) \
-<<<<<<< HEAD
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
 
 
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_STANDARD_CONSTRUCTORS \
-=======
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ARCHIVESERIALIZER
-
-
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineAtlasAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineAtlasAsset) \
@@ -85,11 +57,7 @@ private: \
 public:
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineAtlasAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -102,7 +70,6 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineAtlasAsset)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_38_PROLOG
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
@@ -111,21 +78,10 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_STANDARD_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_38_PROLOG
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_GENERATED_BODY_LEGACY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
@@ -133,15 +89,6 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_GENERATED_BODY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_INCLASS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h_40_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -149,11 +96,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SPINEPLUGIN_API UClass* StaticClass<class USpineAtlasAsset>();
 
 #undef CURRENT_FILE_ID
-<<<<<<< HEAD
 #define CURRENT_FILE_ID FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h
-=======
-#define CURRENT_FILE_ID FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineAtlasAsset_h
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

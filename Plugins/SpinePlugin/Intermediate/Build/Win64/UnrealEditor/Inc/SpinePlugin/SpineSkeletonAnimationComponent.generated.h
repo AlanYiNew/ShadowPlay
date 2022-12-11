@@ -15,22 +15,14 @@ struct FSpineEvent;
 #endif
 #define SPINEPLUGIN_SpineSkeletonAnimationComponent_generated_h
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_41_GENERATED_BODY \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_41_GENERATED_BODY \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	friend struct Z_Construct_UScriptStruct_FSpineEvent_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 template<> SPINEPLUGIN_API UScriptStruct* StaticStruct<struct FSpineEvent>();
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_70_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_70_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationStartDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -43,11 +35,7 @@ static inline void FSpineAnimationStartDelegate_DelegateWrapper(const FMulticast
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_71_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_71_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationEventDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -62,11 +50,7 @@ static inline void FSpineAnimationEventDelegate_DelegateWrapper(const FMulticast
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_72_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_72_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationInterruptDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -79,11 +63,7 @@ static inline void FSpineAnimationInterruptDelegate_DelegateWrapper(const FMulti
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_73_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_73_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationCompleteDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -96,11 +76,7 @@ static inline void FSpineAnimationCompleteDelegate_DelegateWrapper(const FMultic
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_74_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_74_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationEndDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -113,11 +89,7 @@ static inline void FSpineAnimationEndDelegate_DelegateWrapper(const FMulticastSc
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_75_DELEGATE \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_75_DELEGATE \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineAnimationDisposeDelegate_Parms \
 { \
 	UTrackEntry* entry; \
@@ -130,13 +102,8 @@ static inline void FSpineAnimationDisposeDelegate_DelegateWrapper(const FMultica
 }
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_SPARSE_DATA
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_SPARSE_DATA
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execisValidAnimation); \
 	DECLARE_FUNCTION(execgetAnimationDuration); \
@@ -172,11 +139,7 @@ static inline void FSpineAnimationDisposeDelegate_DelegateWrapper(const FMultica
 	DECLARE_FUNCTION(execGetTrackIndex);
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS_NO_PURE_DECLS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS_NO_PURE_DECLS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execisValidAnimation); \
 	DECLARE_FUNCTION(execgetAnimationDuration); \
@@ -212,11 +175,7 @@ static inline void FSpineAnimationDisposeDelegate_DelegateWrapper(const FMultica
 	DECLARE_FUNCTION(execGetTrackIndex);
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS_NO_PURE_DECLS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS_NO_PURE_DECLS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUTrackEntry(); \
 	friend struct Z_Construct_UClass_UTrackEntry_Statics; \
@@ -225,11 +184,7 @@ public: \
 	DECLARE_SERIALIZER(UTrackEntry)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUTrackEntry(); \
 	friend struct Z_Construct_UClass_UTrackEntry_Statics; \
@@ -238,11 +193,7 @@ public: \
 	DECLARE_SERIALIZER(UTrackEntry)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_STANDARD_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UTrackEntry(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTrackEntry) \
@@ -255,11 +206,7 @@ private: \
 public:
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UTrackEntry(UTrackEntry&&); \
@@ -270,7 +217,6 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UTrackEntry)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_77_PROLOG
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
@@ -279,21 +225,10 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_STANDARD_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_77_PROLOG
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_GENERATED_BODY_LEGACY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
@@ -301,28 +236,14 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_GENERATED_BODY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_INCLASS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_79_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 template<> SPINEPLUGIN_API UClass* StaticClass<class UTrackEntry>();
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_SPARSE_DATA
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_SPARSE_DATA
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execClearTrack); \
 	DECLARE_FUNCTION(execClearTracks); \
@@ -337,11 +258,7 @@ template<> SPINEPLUGIN_API UClass* StaticClass<class UTrackEntry>();
 	DECLARE_FUNCTION(execSetAutoPlay);
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execClearTrack); \
 	DECLARE_FUNCTION(execClearTracks); \
@@ -356,11 +273,7 @@ template<> SPINEPLUGIN_API UClass* StaticClass<class UTrackEntry>();
 	DECLARE_FUNCTION(execSetAutoPlay);
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS_NO_PURE_DECLS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS_NO_PURE_DECLS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineSkeletonAnimationComponent(); \
 	friend struct Z_Construct_UClass_USpineSkeletonAnimationComponent_Statics; \
@@ -369,11 +282,7 @@ public: \
 	DECLARE_SERIALIZER(USpineSkeletonAnimationComponent)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineSkeletonAnimationComponent(); \
 	friend struct Z_Construct_UClass_USpineSkeletonAnimationComponent_Statics; \
@@ -382,11 +291,7 @@ public: \
 	DECLARE_SERIALIZER(USpineSkeletonAnimationComponent)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_STANDARD_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineSkeletonAnimationComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineSkeletonAnimationComponent) \
@@ -399,11 +304,7 @@ private: \
 public:
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USpineSkeletonAnimationComponent(USpineSkeletonAnimationComponent&&); \
@@ -414,7 +315,6 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USpineSkeletonAnimationComponent)
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_220_PROLOG
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
@@ -423,21 +323,10 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_STANDARD_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_220_PROLOG
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_GENERATED_BODY_LEGACY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_STANDARD_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
@@ -445,15 +334,6 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_ENHANCED_CONSTRUCTORS \
-=======
-#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_GENERATED_BODY \
-PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-public: \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_SPARSE_DATA \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_INCLASS_NO_PURE_DECLS \
-	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_222_ENHANCED_CONSTRUCTORS \
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -461,11 +341,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SPINEPLUGIN_API UClass* StaticClass<class USpineSkeletonAnimationComponent>();
 
 #undef CURRENT_FILE_ID
-<<<<<<< HEAD
 #define CURRENT_FILE_ID FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h
-=======
-#define CURRENT_FILE_ID FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

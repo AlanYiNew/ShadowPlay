@@ -34,23 +34,14 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
-<<<<<<< HEAD
 "C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.cpp.obj"
 "C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
-=======
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.cpp.obj"
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\Module.SpineEditorPlugin.gen.cpp.obj"
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Default.rc2.res"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\UnrealEditor-UnrealEd.lib"
-<<<<<<< HEAD
 "C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpinePlugin\UnrealEditor-SpinePlugin.lib"
-=======
-"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpinePlugin\UnrealEditor-SpinePlugin.lib"
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -75,13 +66,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-<<<<<<< HEAD
 /OUT:"C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Binaries\Win64\UnrealEditor-SpineEditorPlugin.dll"
 /IMPLIB:"C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\UnrealEditor-SpineEditorPlugin.suppressed.lib"
 /PDB:"C:\Users\Alan\Documents\Unreal Projects\GameDemoOld 5.0\Plugins\SpinePlugin\Binaries\Win64\UnrealEditor-SpineEditorPlugin.pdb"
-=======
-/OUT:"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Binaries\Win64\UnrealEditor-SpineEditorPlugin.dll"
-/IMPLIB:"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Intermediate\Build\Win64\UnrealEditor\Development\SpineEditorPlugin\UnrealEditor-SpineEditorPlugin.suppressed.lib"
-/PDB:"C:\Users\Alan\Documents\Unreal Projects\GameDemo 5.0\Plugins\SpinePlugin\Binaries\Win64\UnrealEditor-SpineEditorPlugin.pdb"
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 /ignore:4078

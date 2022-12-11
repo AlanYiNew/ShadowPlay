@@ -249,7 +249,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineSkeletonRendererComponent() {}
 		return USpineSkeletonRendererComponent::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USpineSkeletonRendererComponent);
-<<<<<<< HEAD
 	struct Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
@@ -259,17 +258,6 @@ void EmptyLinkFunctionForGeneratedCodeSpineSkeletonRendererComponent() {}
 	};
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_2368809104(TEXT("/Script/SpinePlugin"),
 		Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics::ClassInfo),
-=======
-	struct Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics
-	{
-		static const FClassRegisterCompiledInInfo ClassInfo[];
-	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USpineSkeletonRendererComponent, USpineSkeletonRendererComponent::StaticClass, TEXT("USpineSkeletonRendererComponent"), &Z_Registration_Info_UClass_USpineSkeletonRendererComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpineSkeletonRendererComponent), 822702896U) },
-	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_2368809104(TEXT("/Script/SpinePlugin"),
-		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonRendererComponent_h_Statics::ClassInfo),
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -39,11 +39,7 @@ void EmptyLinkFunctionForGeneratedCodeSpinePlugin_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-<<<<<<< HEAD
 				0x4C8260DC,
-=======
-				0x730E0F5D,
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 				0x23FBA626,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -51,9 +47,5 @@ void EmptyLinkFunctionForGeneratedCodeSpinePlugin_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_SpinePlugin.OuterSingleton;
 	}
-<<<<<<< HEAD
 	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SpinePlugin(Z_Construct_UPackage__Script_SpinePlugin, TEXT("/Script/SpinePlugin"), Z_Registration_Info_UPackage__Script_SpinePlugin, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4C8260DC, 0x23FBA626));
-=======
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_SpinePlugin(Z_Construct_UPackage__Script_SpinePlugin, TEXT("/Script/SpinePlugin"), Z_Registration_Info_UPackage__Script_SpinePlugin, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x730E0F5D, 0x23FBA626));
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

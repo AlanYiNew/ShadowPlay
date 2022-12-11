@@ -2607,16 +2607,11 @@ template<> SPINEPLUGIN_API UScriptStruct* StaticStruct<FSpineEvent>()
 		return USpineSkeletonAnimationComponent::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USpineSkeletonAnimationComponent);
-<<<<<<< HEAD
 	struct Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics
-=======
-	struct Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	{
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-<<<<<<< HEAD
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo[] = {
 		{ FSpineEvent::StaticStruct, Z_Construct_UScriptStruct_FSpineEvent_Statics::NewStructOps, TEXT("SpineEvent"), &Z_Registration_Info_UScriptStruct_SpineEvent, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSpineEvent), 1804054732U) },
 	};
@@ -2627,17 +2622,5 @@ template<> SPINEPLUGIN_API UScriptStruct* StaticStruct<FSpineEvent>()
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_1095412798(TEXT("/Script/SpinePlugin"),
 		Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo),
-=======
-	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo[] = {
-		{ FSpineEvent::StaticStruct, Z_Construct_UScriptStruct_FSpineEvent_Statics::NewStructOps, TEXT("SpineEvent"), &Z_Registration_Info_UScriptStruct_SpineEvent, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSpineEvent), 1804054732U) },
-	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UTrackEntry, UTrackEntry::StaticClass, TEXT("UTrackEntry"), &Z_Registration_Info_UClass_UTrackEntry, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTrackEntry), 1561704274U) },
-		{ Z_Construct_UClass_USpineSkeletonAnimationComponent, USpineSkeletonAnimationComponent::StaticClass, TEXT("USpineSkeletonAnimationComponent"), &Z_Registration_Info_UClass_USpineSkeletonAnimationComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USpineSkeletonAnimationComponent), 2527771712U) },
-	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_1095412798(TEXT("/Script/SpinePlugin"),
-		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ClassInfo),
-		Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineSkeletonAnimationComponent_h_Statics::ScriptStructInfo),
->>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
