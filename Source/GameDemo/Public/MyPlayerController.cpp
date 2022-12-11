@@ -57,8 +57,13 @@ void AMyPlayerController::SetControllerDirection(bool bSetFacingRight) {
 
 void AMyPlayerController::BeginPlay() {
 	Super::BeginPlay();
+<<<<<<< HEAD:Source/GameDemo/Public/MyPlayerController.cpp
 	if (!IsOwnByServer())
 	{
+=======
+	
+	if (!bIsGameOwner) {
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e:Source/GameDemo/MyPlayerController.cpp
 		SetControllerDirection(!bFacingRight);
 	}
 }

@@ -35,7 +35,14 @@ private:
 	
 public:
 	AMultiPLayerGameMode();
+<<<<<<< HEAD:Source/GameDemo/Public/MultiPlayer/MultiPLayerGameMode.h
 	
+=======
+
+
+
+
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e:Source/GameDemo/MultiPLayerGameMode.h
 	virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
 	virtual void InitGameState() override;
 

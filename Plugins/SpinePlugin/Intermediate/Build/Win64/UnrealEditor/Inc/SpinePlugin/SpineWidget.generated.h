@@ -15,7 +15,11 @@ class UTrackEntry;
 #endif
 #define SPINEPLUGIN_SpineWidget_generated_h
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_43_DELEGATE \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_43_DELEGATE \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineWidgetBeforeUpdateWorldTransformDelegate_Parms \
 { \
 	USpineWidget* skeleton; \
@@ -28,7 +32,11 @@ static inline void FSpineWidgetBeforeUpdateWorldTransformDelegate_DelegateWrappe
 }
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_44_DELEGATE \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_44_DELEGATE \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 struct _Script_SpinePlugin_eventSpineWidgetAfterUpdateWorldTransformDelegate_Parms \
 { \
 	USpineWidget* skeleton; \
@@ -41,8 +49,13 @@ static inline void FSpineWidgetAfterUpdateWorldTransformDelegate_DelegateWrapper
 }
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_SPARSE_DATA
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_SPARSE_DATA
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execTick); \
 	DECLARE_FUNCTION(execClearTrack); \
@@ -78,7 +91,11 @@ static inline void FSpineWidgetAfterUpdateWorldTransformDelegate_DelegateWrapper
 	DECLARE_FUNCTION(execGetSkins);
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
  \
 	DECLARE_FUNCTION(execTick); \
 	DECLARE_FUNCTION(execClearTrack); \
@@ -114,7 +131,11 @@ static inline void FSpineWidgetAfterUpdateWorldTransformDelegate_DelegateWrapper
 	DECLARE_FUNCTION(execGetSkins);
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS_NO_PURE_DECLS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineWidget(); \
 	friend struct Z_Construct_UClass_USpineWidget_Statics; \
@@ -123,7 +144,11 @@ public: \
 	DECLARE_SERIALIZER(USpineWidget)
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 private: \
 	static void StaticRegisterNativesUSpineWidget(); \
 	friend struct Z_Construct_UClass_USpineWidget_Statics; \
@@ -132,7 +157,11 @@ public: \
 	DECLARE_SERIALIZER(USpineWidget)
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_STANDARD_CONSTRUCTORS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_STANDARD_CONSTRUCTORS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineWidget) \
@@ -145,7 +174,11 @@ private: \
 public:
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_ENHANCED_CONSTRUCTORS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USpineWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -158,6 +191,7 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USpineWidget)
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_46_PROLOG
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
@@ -166,10 +200,21 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_STANDARD_CONSTRUCTORS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_46_PROLOG
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_SPARSE_DATA \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_STANDARD_CONSTRUCTORS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
+<<<<<<< HEAD
 #define FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
@@ -177,6 +222,15 @@ public: \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS_NO_PURE_DECLS \
 	FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_SPARSE_DATA \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_INCLASS_NO_PURE_DECLS \
+	FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h_48_ENHANCED_CONSTRUCTORS \
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 static_assert(false, "Unknown access specifier for GENERATED_BODY() macro in class SpineWidget."); \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -184,7 +238,11 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SPINEPLUGIN_API UClass* StaticClass<class USpineWidget>();
 
 #undef CURRENT_FILE_ID
+<<<<<<< HEAD
 #define CURRENT_FILE_ID FID_GameDemoOld_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h
+=======
+#define CURRENT_FILE_ID FID_GameDemo_5_0_Plugins_SpinePlugin_Source_SpinePlugin_Public_SpineWidget_h
+>>>>>>> f5fe1f70968223ec8166e8395e68527461899b2e
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,6 +5,9 @@
 /.vs
 /.idea
 /Plugins/Developer
+/Plugins/SpinePlugin/Intermediate
 *.sln
 *.sdf
 *.suo
+/Build
+/Package
