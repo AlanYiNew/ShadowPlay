@@ -3,7 +3,7 @@
 
 #include "MultiPLayerGameMode.h"
 #include "DefaultPaperCharacter.h"
-#include "MyGamePlayerState.h"
+#include "Common/CommonPlayerState.h"
 #include "Net/UnrealNetwork.h"
 #include "MyPlayerController.h"
 

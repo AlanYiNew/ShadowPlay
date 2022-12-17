@@ -8,8 +8,10 @@
 
 void ACommonGameMode::PostLogin(APlayerController* NewPlayer) {
 	if (NewPlayer->HasAuthority()) {
+		
 		AllControllers.Push(NewPlayer);
 		auto controller = Cast<ACommonPlayerController>(NewPlayer);
+		controller->SetSimpleUniquePlayerID(CustomUniqueIDGenerator++);
 		if (controller && AllControllers.Num() == 1)
 		{
 			controller->SetOwnByServer(true);

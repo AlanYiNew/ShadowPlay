@@ -4,22 +4,28 @@
 #include "CoreMinimal.h"
 #include "CommonPlayerInfo.generated.h"
 
-enum PLAYER_STATUS
+UENUM(BlueprintType)
+enum EPLAYER_STATUS
 {
-    PLAYER_STATUS_UNREADY,
-    PLAYER_STATUS_READY
+    EPLAYER_STATUS_UNREADY,
+    EPLAYER_STATUS_READY,
+    EPLAYER_STATUS_HOST,
 };
 
 USTRUCT(BlueprintType)
 struct FCommonPlayerInfo
 {
     GENERATED_USTRUCT_BODY()
-
+    UPROPERTY(BlueprintReadWrite)
     FString PlayeName;
-    PLAYER_STATUS PlayerStatus;
-    int PlayerIndex;
-    int PlayerID;
-    FString CharacterName;
+    UPROPERTY(BlueprintReadWrite)
+    TEnumAsByte<EPLAYER_STATUS> PlayerStatus{EPLAYER_STATUS_UNREADY};
+    UPROPERTY(BlueprintReadWrite)
+    int PlayerIndex{};
+    UPROPERTY(BlueprintReadWrite)
+    FString CharacterName{"DefaultCharacter"};
+    UPROPERTY(BlueprintReadWrite)
+    int PlayerID{};
     
 public:
 };

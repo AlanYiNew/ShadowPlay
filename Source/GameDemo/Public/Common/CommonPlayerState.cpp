@@ -1,15 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "MyGamePlayerState.h"
+#include "CommonPlayerState.h"
 #include "Net/UnrealNetwork.h"
 
 
-void AMyGamePlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+void ACommonPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(AMyGamePlayerState, m_score);
-	DOREPLIFETIME(AMyGamePlayerState, m_selected_character);
+	DOREPLIFETIME(ACommonPlayerState, m_score);
+	DOREPLIFETIME(ACommonPlayerState, m_selected_character);
 	//DOREPLIFETIME(ADefaultPaperCharacter, StickCount);
 
 }
@@ -23,9 +23,9 @@ void AMyGamePlayerState::SetSelectedCharacter(const FString& selected_character)
 	}
 }*/
 
-void AMyGamePlayerState::CopyProperties(APlayerState* PlayerState) {
+void ACommonPlayerState::CopyProperties(APlayerState* PlayerState) {
 	Super::CopyProperties(PlayerState);
-	AMyGamePlayerState* state = Cast<AMyGamePlayerState>(PlayerState);
+	ACommonPlayerState* state = Cast<ACommonPlayerState>(PlayerState);
 	if (state != nullptr) {
 		state->m_selected_character =m_selected_character ;
 		state->m_score = m_score;

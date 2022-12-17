@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Containers/UnrealString.h"
 #include "GameFramework/PlayerState.h"
-#include "MyGamePlayerState.generated.h"
+#include "CommonPlayerState.generated.h"
 
 
 
@@ -13,7 +13,7 @@
  * 
  */
 UCLASS(Blueprintable, BlueprintType)
-class GAMEDEMO_API AMyGamePlayerState : public APlayerState
+class GAMEDEMO_API ACommonPlayerState : public APlayerState
 {
 	GENERATED_BODY()
 public:
