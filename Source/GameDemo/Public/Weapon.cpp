@@ -2,6 +2,8 @@
 
 
 #include "Weapon.h"
+
+#include "SpriteComponentWithoutRotation.h"
 #include "Containers/UnrealString.h"
 
 // Sets default values
@@ -11,7 +13,7 @@ AWeapon::AWeapon()
 	PrimaryActorTick.bCanEverTick = true;
 	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 	for (int i = 0; i < 6; i++) {
-		auto x = CreateDefaultSubobject<UPaperSpriteComponent>(*FString::Printf(TEXT("ChainSpring%d"), i));
+		auto x = CreateDefaultSubobject<USpriteComponentWithoutRotation>(*FString::Printf(TEXT("ChainSpring%d"), i));
 		chain_springs.Push(x);
 		x->SetupAttachment(GetRootComponent());
 	}
